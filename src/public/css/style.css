@@ -1,0 +1,451 @@
+@font-face {
+    font-family: 'Roboto Black';
+    src: url('/fonts/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#content-principal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.parallax {
+    background-image: url(../img/_DSC0103-HDR.jpg);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: left;
+    flex-grow: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    margin: -100px;
+    height: 150%;
+    position: fixed;
+    transition: all 1s;
+}
+
+.right-section {
+    background: linear-gradient(145deg, #005F5A, #35B6B4);
+    z-index: 1;
+    position: relative;
+    padding: 0 44px 44px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.button-send {
+    background-color: #fff;
+    color: #005F5A;
+    border-radius: 5px;
+    min-height: 45px;
+    padding: 0.6em;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    margin-top: 13%;
+    font-size: 16px;
+}
+
+.button-send.no-user {
+    background-color: #005F5A;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: #fff;
+    height: 40px;
+    z-index: 1;
+    width: 650px;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-right: 1rem;
+    margin-top: 50px;
+}
+
+.footer.mobile{
+    display: none;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 40%);
+}
+
+.welcome {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    transition: all .45s;
+    left: 0;
+}
+
+.welcome span {
+    font-weight: bold;
+    color: #fff;
+    margin: 20px 0 10px;
+}
+
+.welcome hr {
+    width: 8%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-top: 1px solid #fdfdfd;
+}
+
+.form {
+    width: 75%;
+    padding: 0 44px;
+    margin: auto;
+    margin-bottom: 24px;
+    position: relative;
+    left: 0;
+    transition: all .45s;
+}
+
+.input-group {
+    margin-top: 40px;
+    position: relative;
+}
+
+.input-group.pass{
+    margin-top: 25px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    border-radius: 0;
+    display: block;
+    padding: 0.6em 0.8em;
+    padding-left: 2.1875rem;
+    outline: none !important;
+}
+
+.input-group label {
+    position: absolute;
+    top: 2.5px;
+    left: 30px;
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 15px;
+    transition: all .25s;
+}
+
+.icon{
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 5px;
+    left: 5px;
+}
+
+.icon.user{
+    background-image: url('/img/user-login.png');
+}
+
+.icon.pass{
+    background-image: url('/img/pass-login.png');
+    background-size: 80%;
+}
+
+.olvide {
+    color: #fff;
+    display: block;
+    margin-top: .9em;
+    margin-bottom: 3em;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.olvide.pass{
+    margin-bottom: 1em;
+    margin-top: 2em
+}
+
+.footer a {
+    font-size: .875rem;
+}
+
+.no-user p,
+.recomendacion {
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#preloader {
+    background: rgba(0,0,0,.6);
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#loading {
+    animation: loading 2s infinite ease-out, spin 2s infinite ease-out;
+    border-radius: 50%;
+    font-size: 64px;
+    height: 1em;
+    position: relative;
+    overflow: hidden;
+    width: 1em;
+    margin: 1em auto;
+    text-indent: -9999em;
+    transform: translateZ(0);
+}
+
+.user-avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2px;
+    margin-left: -20px;
+}
+
+#img-user{
+    border: 0.3rem solid #fff;
+    box-shadow: 0px 3px 3px 1px rgb(0 0 0 / 15%), 0px 1px 1px 0px rgb(0 0 0 / 30%);
+    width: 5em;
+    border-radius: 50%;
+}
+
+.info-avatar{
+    text-align: left;
+    max-width: 226px;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.info-avatar p {
+    font-size: 14px;
+}
+
+.info-avatar h4{
+    font-family: sans-serif;
+    margin-bottom: 8px;
+}
+
+.teclado-virtual{
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.teclado-virtual img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+#passForm{
+    margin-top: 30px;
+}
+
+#volver{
+    height: 30px;
+    width: 30px;
+    background-image: url('/img/exit.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+#welcomepass, #passForm, #volver{
+    display: none;
+}
+
+p.error{
+    display: none;
+    padding: 0 0 0 10px;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    color: white !important;
+    background: #c00;
+    line-height: 1.4;
+}
+
+@keyframes loading {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em #005f5a, 0 -0.83em 0 -0.42em #005f5a, 0 -0.83em 0 -0.44em #005f5a, 0 -0.83em 0 -0.46em #005f5a, 0 -0.83em 0 -0.477em #005f5a;
+    }
+
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em #005f5a, 0 -0.83em 0 -0.42em #005f5a, 0 -0.83em 0 -0.44em #005f5a, 0 -0.83em 0 -0.46em #005f5a, 0 -0.83em 0 -0.477em #005f5a;
+    }
+
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em #005f5a, -0.087em -0.825em 0 -0.42em #005f5a, -0.173em -0.812em 0 -0.44em #005f5a, -0.256em -0.789em 0 -0.46em #005f5a, -0.297em -0.775em 0 -0.477em #005f5a;
+    }
+
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em #005f5a, -0.338em -0.758em 0 -0.42em #005f5a, -0.555em -0.617em 0 -0.44em #005f5a, -0.671em -0.488em 0 -0.46em #005f5a, -0.749em -0.34em 0 -0.477em #005f5a;
+    }
+
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em #005f5a, -0.377em -0.74em 0 -0.42em #005f5a, -0.645em -0.522em 0 -0.44em #005f5a, -0.775em -0.297em 0 -0.46em #005f5a, -0.82em -0.09em 0 -0.477em #005f5a;
+    }
+
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em #005f5a, 0 -0.83em 0 -0.42em #005f5a, 0 -0.83em 0 -0.44em #005f5a, 0 -0.83em 0 -0.46em #005f5a, 0 -0.83em 0 -0.477em #005f5a;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (min-width: 1224px) and (max-width: 1823px) {
+    .right-section {
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #content-principal{
+        flex-direction: column;
+    }
+
+    .header-external{
+        background-image: url('/img/_DSC0103-HDR.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        min-height: 120px;
+        background-color: #fff;
+    }
+
+    .header-external img{
+        width: 200px;
+    }
+
+    .parallax, .welcome{
+        display: none;
+    }
+
+    .welcome > img{
+        display: none;
+    }
+
+    .teclado-virtual{
+        display: none;
+    }
+
+    .right-section{
+        min-height: calc(100vh - 120px);
+        justify-content: start;
+        padding: 0 40px 60px;
+    }
+
+    .form {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .input-group {
+        margin-top: 58px;
+    } 
+
+    .olvide {
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+    
+    .footer.right{
+        display: none;
+    }
+    
+    .footer.mobile{
+        display: flex;
+        position: fixed;
+    }
+    .no-user p {
+        margin: 38px 0 15px 0;
+    }
+    .recomendacion{
+        margin: 30px 0 0 0;
+    }
+
+    #submit-pass{
+        margin-top: 3.5%;
+    }
+
+    #userForm{
+        margin: 0 auto;
+    }
+}
