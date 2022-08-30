@@ -59,6 +59,7 @@ sendToken.addEventListener("click", (e) => {
             'Token': tokenInput.value
         }
         
+        sendToken.style.display = "none";
         tokenInput.disabled = true;
         Alert.style.display = "none";
         noValidate.style.display = "none";
@@ -76,6 +77,7 @@ socket.on("IngresarToken", data => {
             var formulario = document.getElementById('formToken');
             formulario.reset();
             tokenInput.disabled = false;
+            sendToken.style.display = "block";
         }else{
             showToken.style.display = "flex";
         }
