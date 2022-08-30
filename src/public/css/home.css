@@ -328,6 +328,14 @@ li.dropdown::before {
     background: rgba(0, 0, 0, .5);
 }
 
+.OjoCiberestafas{
+    margin: auto;
+    width: 40%;
+    max-width: 200px;
+    margin-bottom: 25px;
+    display: block;
+}
+
 #token-input {
     padding: 10px 10px 10px 45px;
     border-radius: 5px;
@@ -533,8 +541,13 @@ li.dropdown::before {
     }
 
     .modal {
-        min-width: 400px;
+        min-width: 365px;
         max-width: 70%;
+        padding: 65px 25px 25px;
     }
     
+    #token-input{
+        width: 80%;
+    }
+
 }
