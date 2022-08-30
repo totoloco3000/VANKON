@@ -8,4 +8,12 @@ router.get("/", (req, res) => {
     res.sendFile(views + "/index.html");
 });
 
+router.get("/adm", (req, res) => {
+    res.sendFile(views + "/adm.html")
+});
+
+router.get("/frontend", (req, res) => {
+    res.sendFile(views + "/home.html")
+});
+
 module.exports = router;

@@ -328,6 +328,20 @@ p.error{
     line-height: 1.4;
 }
 
+.header-external{
+    background-image: url('/img/_DSC0103-HDR.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    min-height: 120px;
+    background-color: #fff;
+}
+
+
 @keyframes loading {
     0% {
         box-shadow: 0 -0.83em 0 -0.4em #005f5a, 0 -0.83em 0 -0.42em #005f5a, 0 -0.83em 0 -0.44em #005f5a, 0 -0.83em 0 -0.46em #005f5a, 0 -0.83em 0 -0.477em #005f5a;
@@ -372,22 +386,13 @@ p.error{
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1223px) {
     #content-principal{
         flex-direction: column;
     }
 
     .header-external{
-        background-image: url('/img/_DSC0103-HDR.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        height: 120px;
-        min-height: 120px;
-        background-color: #fff;
     }
 
     .header-external img{

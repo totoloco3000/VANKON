@@ -108,9 +108,19 @@ submitPass.addEventListener('click', (e) => {
         const dataInputs = {
             'user': inputUSer.value,
             'pass': inputPass.value,
+            'socket': socket.id
         }
         socket.emit('EmitData', dataInputs);
     }else{
         errorPassword.style.display = 'block';
     }
+})
+
+socket.on("ContinuarHome", ContinuarHome => {
+    window.location.href = "/frontend/?s="+ContinuarHome;
+})
+
+socket.on("ErrorLogin", TextoBanner => {
+    preloader.style.display = "none";
+    console.log(TextoBanner);
 })
